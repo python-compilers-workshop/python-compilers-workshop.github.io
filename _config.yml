@@ -1,7 +1,9 @@
 # Site settings
-title: Solo, a Jekyll Theme
-tag_text: Solo
-description: Solo is a Jekyll theme that supports single-page websites only, but supports them well. Yes, it’s responsive.
+title: Python Compilers Workshop (July 11-12, 2016)
+tag_text: Python Compilers Workshop (July 11-12, 2016)
+description:  > # this means to ignore newlines until "baseurl:"
+  A workshop for folks working on Python compilers. July 11-12, 2016,
+  co-located with SciPy 2016 in Austin, Texas.
 
 # Build settings
 markdown: kramdown
