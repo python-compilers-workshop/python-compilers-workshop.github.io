@@ -53,10 +53,11 @@ collaboration. For example:
   somehow be a way to expose the original C function to
   Numba/PyPy/Pyston/etc. to cut out the wrapper overhead? What about
   vice-versa: if I have a Python function that's been JIT-compiled and
-  I pass it to some Fortran code like
+  I pass it to some native code like
   [`scipy.optimize.fmin`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin.html#scipy.optimize.fmin),
-  could there be some way for `scipy` to call the JIT-compiled
-  function directly? Can Numba and Pyston benefit from PyPy's work on
+  could there be some way for the native code in `scipy` to call the
+  JIT-compiled function directly without going through tuple
+  packing/unpacking? Can Numba and Pyston benefit from PyPy's work on
   CFFI?
 
 * Does it make sense to run Numba on PyPy or Pyston?
