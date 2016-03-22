@@ -17,13 +17,17 @@ with the SciPy tutorial days.)
 
 *Venue:* TBD
 
-*Who:* Open to the public. However
+*Who:* Open to the public; no registration fee. However
 [RSVP's are appreciated](mailto:njs@pobox.com) for planning purposes,
 and so that I can update the confirmed attendees list below. In
 addition, we anticipate that we will have travel funding available for
-open-source developers who would otherwise find it difficult to
-attend. If this applies to you then
-[please get in touch as soon as possible](mailto:njs@pobox.com).
+open-source developers working on topically-relevant projects who
+would otherwise find it difficult to attend. If this applies to you
+then
+[please get in touch as soon as possible](mailto:njs@pobox.com). (Note
+that
+[SciPy also has financial aid available](http://scipy2016.scipy.org/ehome/146062/388110/?&&),
+with applications due April 22.)
 
 *Organized by:* [Nathaniel Smith](https://vorpus.org)
 ([njs@pobox.com](mailto:njs@pobox.com))
