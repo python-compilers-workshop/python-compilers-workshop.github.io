@@ -6,76 +6,116 @@ layout: default
 
 *What:* A workshop to bring together folks working on different
 approaches to **native-code compilation for Python**, to share
-experience, discuss future plans, and explore possible points of
-collaboration. One particular question to discuss is whether and how
-we can use JIT or AOT compilation techniques to accelerate C
-extensions like `numpy` or `pandas` without having to rewrite
-these extensions for every new compiler (as is the current
-state-of-the-art).
+experience, discuss future plans and common interests, and explore
+possible points of collaboration -- especially with regard to
+numerical/scientific programming.
 
-*When/where:* **July 11-12**, 2016 in **Austin, Texas**, co-located
-with the [SciPy 2016](scipy2016.scipy.org) conference. (This is just
-before the main conference, and overlaps with the SciPy tutorial
-days.)
+*When and where:* **July 11-12, 2016** in **Austin, Texas**,
+co-located with the [SciPy 2016](http://scipy2016.scipy.org)
+conference. (This is just before the main conference, and overlaps
+with the SciPy tutorial days.)
 
 *Venue:* TBD
 
 *Who:* Open to the public. However
 [RSVP's are appreciated](mailto:njs@pobox.com) for planning purposes,
-and so that I can update the confirmed attendees list below.
+and so that I can update the confirmed attendees list below. In
+addition, we anticipate that we will have travel funding available for
+open-source developers who would otherwise find it difficult to
+attend. If this applies to you then
+[please get in touch as soon as possible](mailto:njs@pobox.com).
 
-*Organized by:* Nathaniel Smith <njs@pobox.com>
+*Organized by:* [Nathaniel Smith](https://vorpus.org)
+([njs@pobox.com](mailto:njs@pobox.com))
 
 
 ## Motivation
 
 There's an intense and growing interest in techniques for compiling
-Python or near-Python languages; a partial list of projects includes
-[Numba](http://numba.pydata.org/),
-[Pyston](https://github.com/dropbox/pyston), [PyPy](http://pypy.org/),
-[Cython](http://cython.org/),
+Python or near-Python languages to native code; a partial list
+includes [PyPy](http://pypy.org/), [Numba](http://numba.pydata.org/),
+[Pyston](https://github.com/dropbox/pyston),
+[Cython](http://cython.org/), [Nuitka](http://nuitka.net/),
 [Pythran](https://github.com/serge-sans-paille/pythran),
 [Pyjion](https://github.com/Microsoft/Pyjion),
-[Nuitka](http://nuitka.net/),
 [Numexpr](https://github.com/pydata/numexpr),
 [HOPE](www.cosmology.ethz.ch/research/software-lab/HOPE.html), ...
 
-Given the wide variety of efforts here, now seems like a
-good time to compare notes!
+Now seems like a good time to compare notes! Plus there are lots of
+questions that seem like they could benefit from some cross-project
+collaboration. For example:
 
-In addition, the numerical/scientific community is particularly
-interested in these tools as a way to speed up Python code that uses
-libraries like `numpy` -- and accomplishing this will require solving
-unique technical and organizational challenges. In principle it's not
-too difficult to compile Python code that uses `numpy` -- your
-compiler "just" has to be compatible enough with the CPython C API to
-call `numpy` directly, and all of the above projects either meet this
-bar, or are anticipated to meet it soon. (In particular, both Pyston
-and PyPy have developers actively working on this.) But if you want
-`numpy`-using code to run *faster* than it does with CPython -- which
-after all is the whole point of having a compiler -- then your
-compiler needs some way to "see inside" `numpy`'s internals in order
-to apply optimizations like unboxing, inlining, and loop fusion. And
-this is impossible when calling extensions using the CPython C API.
+* If I wrap a C function using Cython/CFFI/SWIG/..., can we somehow
+  expose the original C function to Numba/PyPy/Pyston/etc. to cut out
+  the wrapper overhead? What about vice-versa: if I have a Python
+  function that's been JIT-compiled and I pass it to some Fortran code
+  like
+  [`scipy.optimize.fmin`](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.fmin.html#scipy.optimize.fmin),
+  could there be some way for `scipy` to call the JIT-compiled
+  function directly? Can Numba and Pyston benefit from PyPy's work on
+  CFFI?
 
-Historically the main solution to this problem has been to start
-rewriting parts of `numpy` directly inside the compiler infrastructure
--- projects that have gone down this road to a greater or lesser
-extent include Numba, PyPy, Cython, Numexpr, and probably others. And
-if nothing changes then this trend will only accelerate -- at an
-obvious cost in duplicate effort, compatibility, code maturity, and
-the ability to evolve and improve `numpy`'s semantics. Can we do
-better? Could there be some way to write a library like `numpy` so
-that a single codebase could simultaneously target CPython and the
-newer compilers, while achieving competitive speed in all cases? If
-so, can we make that happen? If not, then what's the next-best
-alternative?
+* Does it make sense to run Numba on PyPy or Pyston?
+
+* The Python 2 vs. Python 3 split is very painful for anyone working
+  on compilers/interpreters. What strategies have worked or not
+  worked?
+
+* A number of the compilers above can take code like
+
+  ~~~python
+  total = 0.0
+  for num in range(10000):
+      total += num
+  ~~~
+
+  and perform inlining, unboxing, etc. to compile it down to a tight
+  native loop that far out-performs CPython. This is possible because
+  they have intimate knowledge of built-in Python constructs like
+  `float`, `int`, and `range`.  And a number of them have good enough
+  CPython C API compatibility that they can -- or will soon be able to
+  -- execute the same code, but using `numpy`:
+
+  ~~~python
+  import numpy as np
+  total = 0.0
+  for num in np.arange(10000):
+      total += num
+  ~~~
+
+  But if you're using the CPython C API to call `numpy`, then you
+  can't do unboxing/inlining/loop fusion/etc., because `numpy` objects
+  are a total black box to the compiler, and so this `numpy`ified
+  version of the loop will run at about the same speed in a
+  state-of-the-art JIT as it would in CPython.
+
+  The traditional way to solve this -- as seen in e.g. Numba or
+  Numexpr -- is to give the compiler built-in knowledge of `numpy`
+  types and operations, essentially reimplementing `numpy` inside each
+  compiler. But this strategy has a number of obvious downsides in
+  terms of duplicated effort, subtle incompatibilities, increased
+  testing load for downstream projects, the ability to continue to
+  evolve and improve `numpy`'s semantics, and the potential need to
+  then repeat the whole exercise for other projects like
+  [`dynd`](http://libdynd.org/) (a `numpy` competitor) or
+  `pandas`. And this question is becoming particularly urgent, since
+  not only has Numba already started down this road, but Pyston and
+  PyPy are both working on passing the `numpy` test suite right now
+  and are likely to soon move from worrying about correctness to
+  worrying about speed.
+
+  Can we do better? Could there be some way to write a library like
+  `numpy` so that a single codebase could simultaneously target
+  CPython and the newer compilers, while achieving competitive speed
+  in all cases? If so, what would it take to make that happen? If not,
+  then what's the next-best alternative?
 
 
 ## Schedule
 
-TBD -- probably we'll start with a few short talks to set the stage
-and then switch to unconference mode.
+TBD -- probably we'll start with some talks from different projects to
+outline their approaches and name some problems they're worrying
+about, and then switch to unconference mode.
 
 
 ## Confirmed attendees
@@ -85,11 +125,7 @@ TBD
 
 ## Sponsors
 
-Sponsors: TBD
-
-We anticipate that we will have travel funding available for
-open-source developers who need the help. If this applies to you then
-[please get in touch](mailto:njs@pobox.com).
+TBD
 
 
 ## Travel information
@@ -103,4 +139,4 @@ and other travel details.
 
 ## Code of conduct
 
-(TBD -- maybe we can just point to SciPy's?)
+TBD (maybe we can just point to SciPy's?)
