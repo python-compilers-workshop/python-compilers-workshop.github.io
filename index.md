@@ -39,7 +39,8 @@ There's an intense and growing interest in techniques for compiling
 Python or near-Python languages to native code; a partial list
 includes [PyPy](http://pypy.org/), [Numba](http://numba.pydata.org/),
 [Pyston](https://github.com/dropbox/pyston),
-[Cython](http://cython.org/), [Nuitka](http://nuitka.net/),
+[Cython](http://cython.org/), [Jython](http://www.jython.org/),
+[Nuitka](http://nuitka.net/),
 [Pythran](https://github.com/serge-sans-paille/pythran),
 [Pyjion](https://github.com/Microsoft/Pyjion),
 [Numexpr](https://github.com/pydata/numexpr),
