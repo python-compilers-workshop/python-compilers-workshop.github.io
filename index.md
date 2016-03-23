@@ -5,7 +5,7 @@ layout: default
 # Python Compilers Workshop
 
 *What:* A workshop to bring together folks working on different
-approaches to **native-code compilation for Python**, to share
+approaches to **high-performance compilation for Python**, to share
 experience, discuss future plans and common interests, and explore
 possible points of collaboration -- especially with regard to
 numerical/scientific programming.
@@ -48,7 +48,8 @@ includes [PyPy](http://pypy.org/), [Numba](http://numba.pydata.org/),
 
 Now seems like a good time to compare notes! Plus there are lots of
 questions that seem like they could benefit from some cross-project
-collaboration. For example:
+collaboration. Our exact agenda will depend on participants interests,
+but here are some examples to give the flavor:
 
 * If I wrap a C function using Cython/CFFI/SWIG/..., could there
   somehow be a way to expose the original C function to
@@ -64,8 +65,8 @@ collaboration. For example:
 * Does it make sense to run Numba on PyPy or Pyston?
 
 * The Python 2 vs. Python 3 split is very painful for anyone working
-  on compilers/interpreters. What strategies have worked or not
-  worked?
+  on compilers/interpreters. What strategies for handling this have
+  worked or not worked?
 
 * A number of the compilers above can take code like
 
@@ -100,9 +101,9 @@ collaboration. For example:
   types and operations, essentially reimplementing `numpy` inside each
   compiler. But this strategy has a number of obvious downsides in
   terms of duplicated effort, subtle incompatibilities, increased
-  testing load for downstream projects, the ability to continue to
-  evolve and improve `numpy`'s semantics, and the potential need to
-  then repeat the whole exercise for other projects like
+  testing load for downstream projects, reduced ability to evolve and
+  improve `numpy`'s semantics, and the potential need to then repeat
+  the whole exercise for other projects like
   [`dynd`](http://libdynd.org/) (a `numpy` competitor) or
   `pandas`. And this question is becoming particularly urgent, since
   not only has Numba already started down this road, but Pyston and
