@@ -6,9 +6,9 @@ layout: default
 
 *What:* A workshop to bring together folks working on different
 approaches to **high-performance compilation for Python**, to share
-experience, discuss future plans and common interests, and explore
-possible points of collaboration -- especially with regard to
-numerical/scientific programming.
+experience, discuss common interests, and start sketching out a
+roadmap for how the broader Python ecosystem can adapt to take maximal
+advantage of these new implementations.
 
 *When and where:* **July 11-12, 2016** in **Austin, Texas**,
 co-located with the [SciPy 2016](http://scipy2016.scipy.org)
@@ -44,11 +44,12 @@ includes [PyPy](http://pypy.org/), [Numba](http://numba.pydata.org/),
 [Pythran](https://github.com/serge-sans-paille/pythran),
 [Pyjion](https://github.com/Microsoft/Pyjion),
 [Numexpr](https://github.com/pydata/numexpr),
-[HOPE](www.cosmology.ethz.ch/research/software-lab/HOPE.html), ...
+[HOPE](www.cosmology.ethz.ch/research/software-lab/HOPE.html),
+[GT-Py](https://software.intel.com/en-us/blogs/2016/03/22/gt-py-accelerating-numpy-programs-with-minimal-programming-effort)...
 
 Now seems like a good time to compare notes! Plus there are lots of
 questions that seem like they could benefit from some cross-project
-collaboration. Our exact agenda will depend on participants interests,
+collaboration. Our exact agenda will depend on participants' interests,
 but here are some examples to give the flavor:
 
 * If I wrap a C function using Cython/CFFI/SWIG/..., could there
@@ -125,14 +126,21 @@ outline their approaches and name some problems they're worrying
 about, and then switch to unconference mode.
 
 
-## Confirmed attendees
+## A partial list of confirmed attendees
 
-TBD
+* Nathaniel Smith (NumPy)
+* Jonathan Rocher
+* Robert Cohn (Intel)
+* Kevin Modzelewski (Pyston)
+* Marius Wachtler (Pyston)
+* Maciej Fijalkowski (PyPy)
 
 
 ## Sponsors
 
-TBD
+We're grateful to our sponsors for helping make this event possible:
+
+![Intel](/assets/intel-logo.png)
 
 
 ## Travel information
@@ -146,4 +154,7 @@ and other travel details.
 
 ## Code of conduct
 
-TBD (maybe we can just point to SciPy's?)
+Workshop attendees are expected to adhere to the
+[SciPy code of conduct](http://scipy2016.scipy.org/ehome/146062/388087/?&&).
+Please report any violations or concerns to
+[Nathaniel Smith](mailto:njs@pobox.com) or a member of SciPy staff.
