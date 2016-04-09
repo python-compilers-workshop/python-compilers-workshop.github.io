@@ -129,11 +129,12 @@ about, and then switch to unconference mode.
 ## A partial list of confirmed attendees
 
 * Nathaniel Smith (NumPy)
-* Jonathan Rocher
-* Robert Cohn (Intel)
 * Kevin Modzelewski (Pyston)
 * Marius Wachtler (Pyston)
 * Maciej Fijalkowski (PyPy)
+* Robert Cohn (Intel)
+* Anton Malakhov (Intel)
+* Jonathan Rocher
 
 
 ## Sponsors
