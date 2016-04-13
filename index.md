@@ -15,7 +15,8 @@ co-located with the [SciPy 2016](http://scipy2016.scipy.org)
 conference. (This is just before the main conference, and overlaps
 with the SciPy tutorial days.)
 
-*Venue:* TBD
+*Venue:* [AT&T Center](http://www.meetattexas.com/), room 107 on July
+11, room 104 on July 12
 
 *Who:* Open to the public; no registration fee. However
 [RSVP's are appreciated](mailto:njs@pobox.com) for planning purposes,
