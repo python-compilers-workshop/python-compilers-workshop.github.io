@@ -132,6 +132,7 @@ about, and then switch to unconference mode.
 * Kevin Modzelewski (Pyston)
 * Marius Wachtler (Pyston)
 * Maciej Fijalkowski (PyPy)
+* Matti Picus (PyPy)
 * Robert Cohn (Intel)
 * Anton Malakhov (Intel)
 * Jonathan Rocher
