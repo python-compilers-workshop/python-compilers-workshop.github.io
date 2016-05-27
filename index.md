@@ -15,6 +15,9 @@ co-located with the [SciPy 2016](http://scipy2016.scipy.org)
 conference. (This is just before the main conference, and overlaps
 with the SciPy tutorial days.)
 
+*Announcements / discussion:*
+[the python-compilers mailing list at python.org](https://mail.python.org/mailman/listinfo/python-compilers)
+
 *Venue:* [AT&T Center](http://www.meetattexas.com/), room 107 on July
 11, room 104 on July 12
 
