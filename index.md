@@ -140,6 +140,7 @@ about, and then switch to unconference mode.
 * Joel Akeret (HOPE)
 * Robert Cohn (Intel)
 * Anton Malakhov (Intel)
+* Chi-Keung Luk (Intel, GT-Py)
 * Jonathan Rocher
 
 
