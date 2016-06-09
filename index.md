@@ -18,8 +18,7 @@ with the SciPy tutorial days.)
 *Announcements / discussion:*
 [the python-compilers mailing list at python.org](https://mail.python.org/mailman/listinfo/python-compilers)
 
-*Venue:* [AT&T Center](http://www.meetattexas.com/), room 107 on July
-11, room 104 on July 12
+*Venue:* [AT&T Center](http://www.meetattexas.com/), room 104
 
 *Who:* Open to the public; no registration fee. However
 [RSVP's are appreciated](mailto:njs@pobox.com) for planning purposes,
