@@ -134,7 +134,7 @@ about, and then switch to unconference mode.
 * Nathaniel Smith (NumPy)
 * Kevin Modzelewski (Pyston)
 * Marius Wachtler (Pyston)
-* Maciej Fijalkowski (PyPy)
+* ~~Maciej Fijalkowski (PyPy)~~ (unfortunately can't make it)
 * Matti Picus (PyPy)
 * Dino Viehland (Pyjion)
 * Joel Akeret (HOPE)
