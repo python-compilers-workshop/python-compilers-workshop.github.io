@@ -150,6 +150,11 @@ We're grateful to our sponsors for helping make this event possible:
 
 ![Intel](/assets/intel-logo.png)
 
+We're also very grateful to
+[the SciPy organizers](http://scipy2016.scipy.org/ehome/146062/388083/)
+(especially Jill Cowan) for providing space and other assistance.
+
+Thanks!
 
 ## Travel information
 
