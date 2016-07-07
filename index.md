@@ -132,9 +132,12 @@ about, and then switch to unconference mode.
 ## A partial list of confirmed attendees
 
 * Nathaniel Smith (NumPy)
-* Kevin Modzelewski (Pyston)
-* Marius Wachtler (Pyston)
-* ~~Maciej Fijalkowski (PyPy)~~ (unfortunately can't make it)
+* ~~Kevin Modzelewski (Pyston)~~ (unfortunately had to cancel, may
+  attend remotely)
+* ~~Marius Wachtler (Pyston)~~ (unfortunately had to cancel, may
+  attend remotely)
+* ~~Maciej Fijalkowski (PyPy)~~ (unfortunately had to cancel)
+* Richard Plangger (PyPy)
 * Matti Picus (PyPy)
 * Dino Viehland (Pyjion)
 * Joel Akeret (HOPE)
@@ -142,6 +145,9 @@ about, and then switch to unconference mode.
 * Anton Malakhov (Intel)
 * Chi-Keung Luk (Intel, GT-Py)
 * Jonathan Rocher
+* Siu Kwan Lam (Numba)
+* Stan Seibert (Numba)
+* Ian Henricksen (DyND)
 
 
 ## Sponsors
