@@ -6,15 +6,15 @@ layout: default
 
 ## Quick links for attendees
 
-We'll start at **9:30 am** on **July 11** in **room 104** of the
+We'll start at **9:30 am** (Austin time, 14:30 UTC) on **July 11**
+in **room 104** of the
 [AT&T Center at UT Austin](http://www.meetattexas.com/).
 
 * [Google Hangout for remote attendees](https://hangouts.google.com/call/2z2tx37hbncljbvrrjkh66wetqe)
 * [Shared notes](https://docs.google.com/document/d/1jGksgI96LdYQODa9Fca7EttFEGQfNODphVmbCX0DD1k/edit?usp=sharing) (world writeable)
 * [Shared folder](https://drive.google.com/open?id=0B7lxgmXY3xBLM2JFa0dlaXc3bXM)
   (feel free to add new shared documents here -- the folder is world
-  writeable, but first you need a Google account, then click "add to
-  drive")
+  writeable, but first you need a Google account, then click "open in drive")
 * Text chat: [![Gitter](https://badges.gitter.im/python-compilers-workshop/chat.svg)](https://gitter.im/python-compilers-workshop/chat)
 * Mailing list (announcements, ongoing discussions): [the python-compilers mailing list at python.org](https://mail.python.org/mailman/listinfo/python-compilers)
 
