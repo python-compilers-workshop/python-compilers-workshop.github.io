@@ -4,33 +4,37 @@ layout: default
 
 # Python Compilers Workshop
 
+## Quick links for attendees
+
+We'll start at **9:30 am** on **July 11** in **room 104** of the
+[AT&T Center at UT Austin](http://www.meetattexas.com/).
+
+* [Google Hangout for remote attendees](https://hangouts.google.com/call/2z2tx37hbncljbvrrjkh66wetqe)
+* [Shared notes](https://docs.google.com/document/d/1jGksgI96LdYQODa9Fca7EttFEGQfNODphVmbCX0DD1k/edit?usp=sharing) (world writeable)
+* [Shared folder](https://drive.google.com/open?id=0B7lxgmXY3xBLM2JFa0dlaXc3bXM)
+  (feel free to add new shared documents here -- the folder is world
+  writeable, but first you need a Google account, then click "add to
+  drive")
+* Text chat: [![Gitter](https://badges.gitter.im/python-compilers-workshop/chat.svg)](https://gitter.im/python-compilers-workshop/chat)
+* Mailing list (announcements, ongoing discussions): [the python-compilers mailing list at python.org](https://mail.python.org/mailman/listinfo/python-compilers)
+
+## Basic facts
+
 *What:* A workshop to bring together folks working on different
 approaches to **high-performance compilation for Python**, to share
 experience, discuss common interests, and start sketching out a
 roadmap for how the broader Python ecosystem can adapt to take maximal
 advantage of these new implementations.
 
-*When and where:* **July 11-12, 2016** in **Austin, Texas**,
-co-located with the [SciPy 2016](http://scipy2016.scipy.org)
-conference. (This is just before the main conference, and overlaps
-with the SciPy tutorial days.)
-
-*Announcements / discussion:*
-[the python-compilers mailing list at python.org](https://mail.python.org/mailman/listinfo/python-compilers)
+*When and where:* Starting at **9:30 am**, **July 11-12, 2016** in
+**Austin, Texas**, co-located with the
+[SciPy 2016](http://scipy2016.scipy.org) conference. (This is just
+before the main conference, and overlaps with the SciPy tutorial
+days.)
 
 *Venue:* [AT&T Center](http://www.meetattexas.com/), room 104
 
-*Who:* Open to the public; no registration fee. However
-[RSVP's are appreciated](mailto:njs@pobox.com) for planning purposes,
-and so that I can update the confirmed attendees list below. In
-addition, we anticipate that we will have travel funding available for
-open-source developers working on topically-relevant projects who
-would otherwise find it difficult to attend. If this applies to you
-then
-[please get in touch as soon as possible](mailto:njs@pobox.com). (Note
-that
-[SciPy also has financial aid available](http://scipy2016.scipy.org/ehome/146062/388110/?&&),
-with applications due April 22.)
+*Who:* Open to the public; no registration fee.
 
 *Organized by:* [Nathaniel Smith](https://vorpus.org)
 ([njs@pobox.com](mailto:njs@pobox.com))
@@ -124,6 +128,8 @@ but here are some examples to give the flavor:
 
 ## Schedule
 
+
+
 TBD -- probably we'll start with some talks from different projects to
 outline their approaches and name some problems they're worrying
 about, and then switch to unconference mode.
@@ -148,6 +154,7 @@ about, and then switch to unconference mode.
 * Siu Kwan Lam (Numba)
 * Stan Seibert (Numba)
 * Ian Henricksen (DyND)
+* Dong-Yuan Chen (Intel)
 
 
 ## Sponsors
