@@ -53,7 +53,7 @@ includes [PyPy](http://pypy.org/), [Numba](http://numba.pydata.org/),
 [Pythran](https://github.com/serge-sans-paille/pythran),
 [Pyjion](https://github.com/Microsoft/Pyjion),
 [Numexpr](https://github.com/pydata/numexpr),
-[HOPE](www.cosmology.ethz.ch/research/software-lab/HOPE.html),
+[HOPE](http://www.cosmology.ethz.ch/research/software-lab/HOPE.html),
 [GT-Py](https://software.intel.com/en-us/blogs/2016/03/22/gt-py-accelerating-numpy-programs-with-minimal-programming-effort)...
 
 Now seems like a good time to compare notes! Plus there are lots of
