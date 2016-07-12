@@ -10,8 +10,8 @@ We'll start at **9:30 am** (Austin time, 14:30 UTC) on **July 11**
 in **room 104** of the
 [AT&T Center at UT Austin](http://www.meetattexas.com/).
 
-* [Google Hangout for remote attendees](https://hangouts.google.com/call/2z2tx37hbncljbvrrjkh66wetqe)
-  (PLEASE MUTE YOUR MICROPHONE if you are local or not talking)
+* [Google Hangout for remote attendees](https://hangouts.google.com/call/dqqch3egprho5amsyechogoq2ae)
+  (**NOTE** this is a different link than yesterday -- also PLEASE MUTE YOUR MICROPHONE if you are local or not talking)
 
   * [Fallback hangout if the previous hangout is full](https://hangouts.google.com/hangouts/_/berkeley.edu/compilersworkshop2)
   -- this is slightly broken for inscrutable Google-related reasons --
